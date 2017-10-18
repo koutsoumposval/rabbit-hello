@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+    rabbitmq:
+      image: rabbitmq:3.6
+      restart: "always"
+      ports:
+        - "15672"
+        - "5672"
+
+networks:
+  default:
+    driver: bridge
