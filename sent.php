@@ -27,7 +27,7 @@ $channel->basic_publish(
     'hello'
 );
 
-echo " [x] Sent 'Hello World!'\n";
+echo " [x] Sent 'Hello World!'" . PHP_EOL;
 
 $channel->close();
 $connection->close();

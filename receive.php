@@ -20,7 +20,7 @@ $channel->queue_declare(
     false
 );
 
-echo ' [*] Waiting for messages. To exit press CTRL+C', "\n";
+echo ' [*] Waiting for messages. To exit press CTRL+C' . PHP_EOL;
 
 $channel->basic_consume(
     'hello',
