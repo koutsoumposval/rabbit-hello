@@ -30,7 +30,7 @@ $channel->basic_consume(
     false,
     false,
     function ($msg) {
-        echo " [x] Received ", $msg->body, "\n";
+        echo " [x] Received ", $msg->body, PHP_EOL;
     }
 );
 
