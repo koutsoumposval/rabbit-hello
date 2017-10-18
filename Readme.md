@@ -5,6 +5,7 @@ Simple rabbitMQ example for learning purposes
 Build
 ----------
 ```
+composer install
 docker-compose up -d
 ```
 
