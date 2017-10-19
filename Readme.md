@@ -25,16 +25,22 @@ rabbit-hello.dev:15672
 
 ```
 
-Receive
+Example
 ----------
+In `example` directory
 ```
-php receiver.php
-```
+# Terminal 1 - Open Connection - waiting to consume messages
+$ php receiver.php
+[*] Waiting for messages...
 
-Produce
-----------
-```
-php producer.php
+# Terminal 2 - Open Connection - send message
+$ php producer.php
+[x] Sent 'Hello World!'
+
+# Terminal 1 - Message received
+$ php receiver.php
+[*] Waiting for messages...
+[x] Received Hello World!
 ```
 
 Test
