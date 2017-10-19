@@ -1,6 +1,6 @@
-RabbitMQ Hello World
+Hello Rabbit
 ======================
-Simple rabbitMQ example for learning purposes
+Easily produce & receive messages with RabbitMQ.
 
 Build
 ----------
@@ -28,11 +28,15 @@ rabbit-hello.dev:15672
 Receive
 ----------
 ```
-php receive.php
+php receiver.php
 ```
 
-Receive
+Produce
 ----------
 ```
-php send.php
+php producer.php
 ```
+
+Test
+----------
+<i>TODO</i>
