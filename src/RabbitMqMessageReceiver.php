@@ -12,16 +12,28 @@ class RabbitMqMessageReceiver extends RabbitMqMessaging implements MessageReceiv
     /**
      * @param string $exchangeName
      * @param callable $callback
+     * @param string $consumerTag
+     * @param bool $noLocal
+     * @param bool $noAck
+     * @param bool $exclusive
+     * @param bool $noWait
      */
-    public function receive(string $exchangeName, Callable $callback): void
-    {
+    public function receive(
+        string $exchangeName,
+        Callable $callback,
+        string $consumerTag = '',
+        bool $noLocal = false,
+        bool $noAck = true,
+        bool $exclusive = false,
+        bool $noWait = false
+    ): void {
         $this->channel($exchangeName)->basic_consume(
             $exchangeName,
-            '',
-            false,
-            true,
-            false,
-            false,
+            $consumerTag,
+            $noLocal,
+            $noAck,
+            $exclusive,
+            $noWait,
             $callback
         );
     }
