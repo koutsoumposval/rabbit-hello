@@ -1,5 +1,12 @@
 {
     "require": {
-        "php-amqplib/php-amqplib": "^2.7"
+        "php-amqplib/php-amqplib": "^2.7",
+        "php": "^7.1",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "RabbitHello\\": "src/"
+        }
     }
 }
