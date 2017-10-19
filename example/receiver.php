@@ -10,5 +10,8 @@ $callback = function ($msg) {
 $receiver = new RabbitMqMessageReceiver($connection);
 $receiver->open($exchangeName);
 $receiver->receive($exchangeName, $callback);
+
+echo " [*] Waiting for messages..." . PHP_EOL;
+
 $receiver->wait($exchangeName);
 $receiver->close();
